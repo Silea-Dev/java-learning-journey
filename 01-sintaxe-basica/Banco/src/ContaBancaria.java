@@ -20,12 +20,15 @@ public class ContaBancaria {
         return convertido;
     }
 
-    public void depositar(double valor){
+    public int depositar(double valor){
         if (valor >= 0){
             this.saldo += valor;
+            System.out.println("Valor depositado com sucesso!");
+            return 0;
         }
         else{
             System.out.println("[ERROR] Não se pode depositar um valor negativo!");
+            return -1;
         }
     }
 
@@ -33,7 +36,7 @@ public class ContaBancaria {
         if(this.saldo - valor > 0){
             if(valor >= 0){
                 this.saldo -= valor;
-                System.out.printf("Operação realizada com sucesso!\nSeu novo saldo é: %f\n", this.saldo);
+                System.out.printf("Operação realizada com sucesso!\nSeu novo saldo é: %.2f\n", this.saldo);
                 return 0;
             }
             else {
@@ -42,12 +45,8 @@ public class ContaBancaria {
             }
         }
         else{
-            System.out.printf("[ALERT] Saldo insuficiente!\nSaldo atual: &f\n", this.saldo);
+            System.out.printf("[ALERT] Saldo insuficiente!\nSaldo atual: %.2f\n", this.saldo);
             return -1;
         }
-    }
-
-    public void verExtrato(){
-        System.out.printf("Titular: &s\nSaldo: %f\n", this.titular, this.saldo);
     }
 }

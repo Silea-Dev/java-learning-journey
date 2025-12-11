@@ -29,8 +29,22 @@ public class ContaBancaria {
         }
     }
 
-    public void sacar(double valor){
-
+    public int sacar(double valor){
+        if(this.saldo - valor > 0){
+            if(valor >= 0){
+                this.saldo -= valor;
+                System.out.printf("Operação realizada com sucesso!\nSeu novo saldo é: %f\n", this.saldo);
+                return 0;
+            }
+            else {
+                System.out.println("[ERROR] Por favor, digite um valor POSITIVO!");
+                return -1;
+            }
+        }
+        else{
+            System.out.printf("[ALERT] Saldo insuficiente!\nSaldo atual: &f\n", this.saldo);
+            return -1;
+        }
     }
 
     public void verExtrato(){

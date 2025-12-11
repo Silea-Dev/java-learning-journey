@@ -16,7 +16,7 @@ public class ContaBancaria {
     }
 
     public double converterNumero(String a){
-        double convertido = Float.parseFloat(a);
+        double convertido = Double.parseDouble(a);
         return convertido;
     }
 
@@ -33,7 +33,7 @@ public class ContaBancaria {
     }
 
     public int sacar(double valor){
-        if(this.saldo - valor > 0){
+        if(this.saldo - valor >= 0){
             if(valor >= 0){
                 this.saldo -= valor;
                 System.out.printf("Operação realizada com sucesso!\nSeu novo saldo é: %.2f\n", this.saldo);

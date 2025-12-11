@@ -22,12 +22,12 @@ public class Carro {
         return velocidade;
     }
 
-    void acelerar() {
+    public void acelerar() {
         velocidade += 10;
         System.out.printf("Vrum! O %s acelerou. Velocidade atual: %.1f km/h\n", this.modelo, this.velocidade);
     }
 
-    void frear() {
+   public void frear() {
         if (velocidade > 0) {
             velocidade -= 10;
             System.out.printf("Eiiita! O %s freou. Velocidade: %.1f km/h\n", this.modelo, this.velocidade);

@@ -23,7 +23,7 @@ public class Main {
         Carro veiculo = new Carro(modelo, cor);
         System.out.printf("Modelo: %s,Cor: %s\n", modelo, cor);
         while (true){
-            System.out.println("Acelerar [1] | Freiar [2] | Mostrar Painel [3] | Voltar [ex]");
+            System.out.println("Acelerar [1] | Freiar [2] | Mostrar Painel [3] | Voltar [ex] ");
             String escolhido = scanner.nextLine();
             if (escolhido.equals("ex")){
                 System.out.println("Voltando...");

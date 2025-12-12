@@ -30,4 +30,5 @@ bin/
 .DS_Store
 
 .idea
-AnalisadorNumero.iml
+
+Banco.iml
